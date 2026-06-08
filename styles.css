@@ -71,7 +71,98 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; line-hei
   justify-content: space-between;
   height: 80px; /* slightly taller header */
 }
+/* ===== Head Dentist ===== */
 
+.doctor-card{
+  display:grid;
+  grid-template-columns:420px 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.doctor-gallery{
+  position:relative;
+}
+
+.doctor-gallery img{
+  width:100%;
+  height:550px;
+  object-fit:cover;
+  border-radius:24px;
+  box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+.doctor-btn{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  width:46px;
+  height:46px;
+  border:none;
+  border-radius:50%;
+  background:#fff;
+  cursor:pointer;
+  font-size:28px;
+  box-shadow:0 8px 25px rgba(0,0,0,.15);
+  transition:.3s;
+}
+
+.doctor-btn:hover{
+  transform:translateY(-50%) scale(1.08);
+}
+
+#prevDoctor{
+  left:15px;
+}
+
+#nextDoctor{
+  right:15px;
+}
+
+.doctor-content h3{
+  font-size:2rem;
+  margin-bottom:10px;
+}
+
+.doctor-position{
+  color:var(--brand, #0f766e);
+  font-weight:700;
+  margin-bottom:20px;
+  font-size:1.1rem;
+}
+
+.doctor-content p{
+  line-height:1.8;
+  margin-bottom:25px;
+}
+
+.doctor-content h4{
+  margin-bottom:15px;
+}
+
+.doctor-education{
+  padding-left:20px;
+}
+
+.doctor-education li{
+  margin-bottom:10px;
+}
+
+@media (max-width:900px){
+
+  .doctor-card{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .doctor-gallery img{
+    height:420px;
+  }
+
+  .doctor-content h3{
+    font-size:1.6rem;
+  }
+}
 /* ===== Brand ===== */
 .brand {
   display: flex;
