@@ -74,7 +74,17 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; line-hei
 .brand__mark { color: var(--accent); }
 .brand__rest { color: var(--text); margin-left: 2px; }
 .brand--light .brand__rest { color: var(--white); }
-
+.brand__logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
 .nav { display: flex; gap: 32px; }
 .nav a { font-size: 15px; font-weight: 500; color: var(--muted); transition: color .2s ease; }
 .nav a:hover { color: var(--accent); }
