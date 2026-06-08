@@ -67,6 +67,7 @@ const translations = {
 "doctor.edu3": "Master i Shkencave (MSc)",
 "doctor.edu4": "Specialist në Ortodonci",
 "doctor.edu5": "Trajnime të Avancuara në Stomatologji Estetike",
+     "gallery.viewAll": "Shiko Galerinë e Plotë",
   },
   mk: {
     "nav.about": "За нас",
@@ -131,6 +132,7 @@ const translations = {
 "doctor.edu3": "Магистер на науки (MSc)",
 "doctor.edu4": "Специјалист по ортодонција",
 "doctor.edu5": "Напредни обуки по естетска стоматологија",
+     "gallery.viewAll": "Погледни ја целата галерија",
   },
   tr: {
     "nav.about": "Hakkımızda",
@@ -195,6 +197,7 @@ const translations = {
 "doctor.edu3": "Fen Bilimleri Yüksek Lisansı (MSc)",
 "doctor.edu4": "Ortodonti Uzmanı",
 "doctor.edu5": "Estetik Diş Hekimliği Alanında İleri Eğitimler",
+     "gallery.viewAll": "Tüm Galeriyi Gör",
   }
 };
 
