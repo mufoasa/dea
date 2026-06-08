@@ -1,8 +1,3 @@
-/* ============================================================
-   DEA Dent — translations + interactions
-   Edit the `translations` object below to change any text.
-   ============================================================ */
-
 const translations = {
   sq: {
     "nav.about": "Rreth nesh",
