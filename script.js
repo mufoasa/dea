@@ -55,7 +55,7 @@ const translations = {
     "contact.send": "Dërgo mesazhin",
     "contact.success": "Faleminderit — do t'ju kontaktojmë së shpejti.",
     "footer.tag": "Kujdes dentar modern në Gostivar.",
-    "footer.rights": "Të gjitha të drejtat e rezervuara."
+    "footer.rights": "Të gjitha të drejtat e rezervuara.",
      "doctor.eyebrow": "Specialisti ynë",
 "doctor.title": "Njihuni me Ortodontin Tonë Kryesor",
 "doctor.name": "Dr. Zumri Bitri, PhD, DDS, MSc",
@@ -119,7 +119,7 @@ const translations = {
     "contact.send": "Испрати порака",
     "contact.success": "Ви благодариме — наскоро ќе ве контактираме.",
     "footer.tag": "Модерна стоматолошка нега во Гостивар.",
-    "footer.rights": "Сите права задржани."
+    "footer.rights": "Сите права задржани.",
    "doctor.eyebrow": "Наш специјалист",
 "doctor.title": "Запознајте го нашиот главен ортодонт",
 "doctor.name": "Д-р Зумри Битри, PhD, DDS, MSc",
@@ -183,7 +183,7 @@ const translations = {
     "contact.send": "Mesaj gönder",
     "contact.success": "Teşekkürler — kısa süre içinde sizinle iletişime geçeceğiz.",
     "footer.tag": "Gostivar'da modern diş bakımı.",
-    "footer.rights": "Tüm hakları saklıdır."
+    "footer.rights": "Tüm hakları saklıdır.",
      "doctor.eyebrow": "Uzmanımız",
 "doctor.title": "Baş Ortodontistimiz ile Tanışın",
 "doctor.name": "Dr. Zumri Bitri, PhD, DDS, MSc",
