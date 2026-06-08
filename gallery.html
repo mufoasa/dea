@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DEA Dent Gallery</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+.gallery-hero{
+  padding:140px 20px 70px;
+  text-align:center;
+  background:var(--soft);
+}
+
+.gallery-hero h1{
+  font-family:"Fraunces",serif;
+  font-size:clamp(2.5rem,5vw,4rem);
+  margin-bottom:15px;
+}
+
+.gallery-hero p{
+  max-width:700px;
+  margin:auto;
+  color:var(--muted);
+}
+
+.gallery-grid{
+  width:min(1400px,92%);
+  margin:60px auto 100px;
+  columns:4 300px;
+  column-gap:20px;
+}
+
+.gallery-item{
+  margin-bottom:20px;
+  break-inside:avoid;
+}
+
+.gallery-item img{
+  width:100%;
+  border-radius:18px;
+  display:block;
+  box-shadow:var(--shadow);
+  transition:.35s;
+}
+
+.gallery-item img:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow-hover);
+}
+
+.back-home{
+  display:inline-flex;
+  margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+
+    <a href="index.html" class="brand">
+      <img src="deanav.png" alt="DEA Dent Logo" class="brand__logo">
+    </a>
+
+    <div class="lang">
+      <button class="lang__btn is-active" data-lang="sq">SQ</button>
+      <button class="lang__btn" data-lang="mk">MK</button>
+      <button class="lang__btn" data-lang="tr">TR</button>
+    </div>
+
+  </div>
+</header>
+
+<section class="gallery-hero">
+
+  <h1 data-i18n="gallerypage.title">
+    DEA Dent Gallery
+  </h1>
+
+  <p data-i18n="gallerypage.subtitle">
+    A collection of photographs from our modern clinic.
+  </p>
+
+  <a href="index.html" class="btn btn--primary back-home">
+    ← Home
+  </a>
+
+</section>
+
+<section>
+
+<div class="gallery-grid">
+
+<div class="gallery-item"><img src="https://i.imgur.com/rQV6n4t.jpeg"></div>
+<div class="gallery-item"><img src="https://i.imgur.com/STuyWwk.jpeg"></div>
+<div class="gallery-item"><img src="https://i.imgur.com/CuFafmp.jpeg"></div>
+<div class="gallery-item"><img src="https://i.imgur.com/7d9X7YG.jpeg"></div>
+
+<div class="gallery-item"><img src="https://i.imgur.com/o8MZr1F.jpeg"></div>
+<div class="gallery-item"><img src="https://i.imgur.com/PophjnO.jpeg"></div>
+<div class="gallery-item"><img src="https://i.imgur.com/lcP5q7a.jpeg"></div>
+<div class="gallery-item"><img src="https://i.imgur.com/rOFCN62.jpeg"></div>
+
+<div class="gallery-item"><img src="https://i.imgur.com/Xpe6WG9.jpeg"></div>
+<div class="gallery-item"><img src="https://i.imgur.com/4NEYXn5.jpeg"></div>
+<div class="gallery-item"><img src="https://i.imgur.com/o7fA1Hm.jpeg"></div>
+<div class="gallery-item"><img src="https://i.imgur.com/dtA7Ccs.jpeg"></div>
+
+<div class="gallery-item"><img src="https://i.imgur.com/Y7gAcJJ.jpeg"></div>
+<div class="gallery-item"><img src="https://i.imgur.com/IXWmdCf.jpeg"></div>
+<div class="gallery-item"><img src="https://i.imgur.com/fA2Okga.jpeg"></div>
+<div class="gallery-item"><img src="https://i.imgur.com/Dwspfie.jpeg"></div>
+
+<div class="gallery-item"><img src="https://i.imgur.com/oyMs38c.jpeg"></div>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
