@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEA Dent – Modern Dental Care in Gostivar</title>
+  <meta name="description" content="DEA Dent is a modern dental clinic in Gostivar, North Macedonia, offering general dentistry, implants, orthodontics and more with experienced dentists and advanced equipment." />
+  <meta name="keywords" content="dentist Gostivar, dental clinic, DEA Dent, implants, orthodontics, teeth whitening, North Macedonia" />
+  <meta name="author" content="DEA Dent" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DEA Dent – Modern Dental Care in Gostivar" />
+  <meta property="og:description" content="Modern dental clinic in Gostivar, North Macedonia. Trust, comfort and advanced dentistry." />
+  <meta property="og:image" content="/images/hero.png" />
+  <meta property="og:locale" content="sq_AL" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="brand" aria-label="DEA Dent home">
+        <span class="brand__mark">DEA</span><span class="brand__rest">Dent</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang" role="group" aria-label="Language switcher">
+          <button class="lang__btn is-active" data-lang="sq" type="button">SQ</button>
+          <button class="lang__btn" data-lang="mk" type="button">MK</button>
+          <button class="lang__btn" data-lang="tr" type="button">TR</button>
+        </div>
+        <a href="#contact" class="btn btn--primary btn--sm" data-i18n="nav.book">Book Appointment</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#services" data-i18n="nav.services">Services</a>
+      <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="hero">
+      <video class="hero__media" autoplay muted loop playsinline poster="/images/hero.png" aria-hidden="true">
+        <!-- Drop a clinic .mp4 here for a video background; the poster image is shown otherwise -->
+      </video>
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">Gostivar, North Macedonia</p>
+        <h1 class="hero__title" data-i18n="hero.title">DEA Dent — Modern Dental Care in Gostivar</h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">Trust, comfort and modern dentistry. We combine advanced technology with a gentle, patient-first approach.</p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary" data-i18n="hero.book">Book Appointment</a>
+          <a href="#services" class="btn btn--ghost" data-i18n="hero.services">View Services</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about__intro">
+          <p class="eyebrow" data-i18n="about.eyebrow">About the clinic</p>
+          <h2 class="section__title" data-i18n="about.title">A modern clinic built around your comfort</h2>
+          <p class="lead" data-i18n="about.body">At DEA Dent we bring together modern equipment, experienced dentists and a calm, hygienic environment. Every treatment is planned with precision and delivered with care, so your visit feels reassuring from the first moment to the last.</p>
+          <ul class="about__points">
+            <li data-i18n="about.point1">Modern, regularly serviced equipment</li>
+            <li data-i18n="about.point2">Experienced, friendly dental team</li>
+            <li data-i18n="about.point3">Patient comfort at every step</li>
+            <li data-i18n="about.point4">Strict hygiene and sterilization</li>
+          </ul>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat__num">15+</span>
+            <span class="stat__label" data-i18n="about.stat1">Years of experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">12,000+</span>
+            <span class="stat__label" data-i18n="about.stat2">Patients treated</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">40,000+</span>
+            <span class="stat__label" data-i18n="about.stat3">Treatments performed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section class="section section--soft" id="services">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow" data-i18n="services.eyebrow">Our services</p>
+          <h2 class="section__title" data-i18n="services.title">Complete care under one roof</h2>
+        </div>
+        <div class="grid services">
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 4c-2.5-1.5-5 0-5 3 0 2 .5 4 1.2 6.4C8.8 15.5 9.3 18 10 19c.6.9 1.4.9 2 0 .5-.8.9-2 1.2-3.2.2-.8.9-1.3 1.6-1.3s1.4.5 1.6 1.3C16.8 17 17.2 18.2 17.8 19c.6.9 1.4.9 2 0 .7-1 1.2-3.5 1.8-5.6C22.3 11 22.8 9 22.8 7"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="services.s1.title">General Dentistry</h3>
+            <p class="card__text" data-i18n="services.s1.text">Routine check-ups, fillings and treatment for everyday dental needs.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v8"/><path d="M9 6h6"/><path d="M10 22l2-9 2 9"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="services.s2.title">Dental Implants</h3>
+            <p class="card__text" data-i18n="services.s2.text">Durable, natural-looking replacements for missing teeth.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c-3 0-6 2-6 6 0 4 2 7 3 9 .7 1.3 1.5 1.3 1.8 0L12 14l1.2 4c.3 1.3 1.1 1.3 1.8 0 1-2 3-5 3-9 0-4-3-6-6-6z"/><path d="M9 6.5c1-.6 2-.6 3 0"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="services.s3.title">Teeth Whitening</h3>
+            <p class="card__text" data-i18n="services.s3.text">Safe, professional whitening for a brighter, confident smile.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="9" width="16" height="6" rx="3"/><path d="M8 9v6M12 9v6M16 9v6"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="services.s4.title">Orthodontics</h3>
+            <p class="card__text" data-i18n="services.s4.text">Braces and clear aligners to straighten teeth at any age.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 10l6-5 6 5"/><path d="M6 10v5c0 3 2 5 6 5s6-2 6-5v-5"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="services.s5.title">Crowns &amp; Bridges</h3>
+            <p class="card__text" data-i18n="services.s5.text">Restorations that rebuild damaged or missing teeth beautifully.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.5-7-10a4 4 0 017-2.5A4 4 0 0119 11c0 5.5-7 10-7 10z"/></svg>
+            </div>
+            <h3 class="card__title" data-i18n="services.s6.title">Preventive Care</h3>
+            <p class="card__text" data-i18n="services.s6.text">Cleanings and guidance to keep your smile healthy for life.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Gallery ===== -->
+    <section class="section" id="gallery">
+      <div class="container section__head">
+        <p class="eyebrow" data-i18n="gallery.eyebrow">Inside DEA Dent</p>
+        <h2 class="section__title" data-i18n="gallery.title">A look around our clinic</h2>
+      </div>
+      <div class="gallery" id="gallery-track" aria-label="Clinic gallery, drag to scroll">
+        <div class="gallery__inner" id="gallery-inner">
+          <figure class="gallery__item"><img src="/images/gallery-interior.png" alt="Modern dental treatment room at DEA Dent" loading="lazy" /></figure>
+          <figure class="gallery__item"><img src="/images/gallery-tools.png" alt="Sterile dental instruments arranged neatly" loading="lazy" /></figure>
+          <figure class="gallery__item"><img src="/images/gallery-doctor.png" alt="A DEA Dent dentist at work" loading="lazy" /></figure>
+          <figure class="gallery__item"><img src="/images/gallery-reception.png" alt="DEA Dent reception and waiting area" loading="lazy" /></figure>
+          <figure class="gallery__item"><img src="/images/gallery-interior.png" alt="Modern dental treatment room at DEA Dent" loading="lazy" /></figure>
+          <figure class="gallery__item"><img src="/images/gallery-tools.png" alt="Sterile dental instruments arranged neatly" loading="lazy" /></figure>
+          <figure class="gallery__item"><img src="/images/gallery-doctor.png" alt="A DEA Dent dentist at work" loading="lazy" /></figure>
+          <figure class="gallery__item"><img src="/images/gallery-reception.png" alt="DEA Dent reception and waiting area" loading="lazy" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="section section--soft" id="contact">
+      <div class="container contact">
+        <div class="contact__info">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Get in touch</p>
+          <h2 class="section__title" data-i18n="contact.title">Book your visit</h2>
+          <p class="lead" data-i18n="contact.body">We are happy to answer your questions and help you schedule an appointment that fits your day.</p>
+          <ul class="contact__list">
+            <li>
+              <span class="contact__label" data-i18n="contact.addressLabel">Address</span>
+              <span>Gostivar, North Macedonia</span>
+            </li>
+            <li>
+              <span class="contact__label" data-i18n="contact.phoneLabel">Phone</span>
+              <a href="tel:+38900000000">+389 00 000 000</a>
+            </li>
+            <li>
+              <span class="contact__label" data-i18n="contact.emailLabel">Email</span>
+              <a href="mailto:info@deadent.mk">info@deadent.mk</a>
+            </li>
+            <li>
+              <span class="contact__label" data-i18n="contact.hoursLabel">Working hours</span>
+              <span data-i18n="contact.hours">Mon–Fri 09:00–19:00 · Sat 09:00–14:00</span>
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact__form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name" data-i18n="contact.name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="field">
+            <label for="phone" data-i18n="contact.phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required />
+          </div>
+          <div class="field">
+            <label for="message" data-i18n="contact.message">Message</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary" data-i18n="contact.send">Send Message</button>
+          <p class="form__note" id="formNote" role="status" aria-live="polite" data-i18n="contact.success" hidden>Thank you — we will contact you shortly.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#hero" class="brand brand--light"><span class="brand__mark">DEA</span><span class="brand__rest">Dent</span></a>
+        <p class="footer__tag" data-i18n="footer.tag">Modern dental care in Gostivar.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <a href="#about" data-i18n="nav.about">About</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="footer__social" aria-label="Social links">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.5-3H14V4.5c0-.9.3-1.5 1.6-1.5H17V.2C16.7.1 15.7 0 14.6 0 12.2 0 10.5 1.5 10.5 4.2V6H8v3h2.5v9H14V9z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.7L7 20.4A10 10 0 1012 2zm0 18a8 8 0 01-4.1-1.1l-.3-.2-2.8.7.7-2.7-.2-.3A8 8 0 1112 20zm4.4-5.6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.5 6.5 0 01-3.2-2.8c-.1-.2 0-.4.1-.5l.4-.5.2-.4v-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3a2.7 2.7 0 00-.9 2c0 1.2.9 2.4 1 2.6.1.2 1.8 2.8 4.4 3.9 1.6.7 2.2.7 3 .6.5-.1 1.4-.6 1.6-1.1.2-.6.2-1 .1-1.1l-.4-.3z"/></svg></a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year"></span> DEA Dent. <span data-i18n="footer.rights">All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
