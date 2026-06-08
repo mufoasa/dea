@@ -56,6 +56,17 @@ const translations = {
     "contact.success": "Faleminderit — do t'ju kontaktojmë së shpejti.",
     "footer.tag": "Kujdes dentar modern në Gostivar.",
     "footer.rights": "Të gjitha të drejtat e rezervuara."
+     "doctor.eyebrow": "Specialisti ynë",
+"doctor.title": "Njihuni me Ortodontin Tonë Kryesor",
+"doctor.name": "Dr. Zumri Bitri, PhD, DDS, MSc",
+"doctor.position": "Specialist në Ortodonci dhe Stomatologji Estetike",
+"doctor.bio": "Dr. Zumri Bitri është një specialist i kualifikuar me përvojë të gjerë në ortodonci dhe stomatologji estetike. Përkushtimi i tij ndaj përsosmërisë, inovacionit dhe kujdesit të përqendruar te pacienti ka ndihmuar shumë pacientë të arrijnë buzëqeshje më të shëndetshme dhe më të sigurta. Përmes zhvillimit të vazhdueshëm profesional dhe përdorimit të teknologjive moderne dentare, ai ofron plane trajtimi të personalizuara për çdo pacient.",
+"doctor.educationTitle": "Arsimi dhe Kualifikimet",
+"doctor.edu1": "Doktor i Shkencave (PhD)",
+"doctor.edu2": "Doktor i Kirurgjisë Dentare (DDS)",
+"doctor.edu3": "Master i Shkencave (MSc)",
+"doctor.edu4": "Specialist në Ortodonci",
+"doctor.edu5": "Trajnime të Avancuara në Stomatologji Estetike",
   },
   mk: {
     "nav.about": "За нас",
@@ -109,6 +120,17 @@ const translations = {
     "contact.success": "Ви благодариме — наскоро ќе ве контактираме.",
     "footer.tag": "Модерна стоматолошка нега во Гостивар.",
     "footer.rights": "Сите права задржани."
+   "doctor.eyebrow": "Наш специјалист",
+"doctor.title": "Запознајте го нашиот главен ортодонт",
+"doctor.name": "Д-р Зумри Битри, PhD, DDS, MSc",
+"doctor.position": "Специјалист по ортодонција и естетска стоматологија",
+"doctor.bio": "Д-р Зумри Битри е високо квалификуван стоматолошки специјалист со долгогодишно искуство во ортодонцијата и естетската стоматологија. Неговата посветеност кон извонредноста, иновациите и грижата за пациентите им помогнала на многу пациенти да постигнат поздрава и посамоуверена насмевка. Преку континуирана едукација и примена на современи стоматолошки технологии, тој обезбедува индивидуален пристап и персонализирани третмани за секој пациент.",
+"doctor.educationTitle": "Образование и квалификации",
+"doctor.edu1": "Доктор на науки (PhD)",
+"doctor.edu2": "Доктор по дентална хирургија (DDS)",
+"doctor.edu3": "Магистер на науки (MSc)",
+"doctor.edu4": "Специјалист по ортодонција",
+"doctor.edu5": "Напредни обуки по естетска стоматологија",
   },
   tr: {
     "nav.about": "Hakkımızda",
@@ -162,6 +184,17 @@ const translations = {
     "contact.success": "Teşekkürler — kısa süre içinde sizinle iletişime geçeceğiz.",
     "footer.tag": "Gostivar'da modern diş bakımı.",
     "footer.rights": "Tüm hakları saklıdır."
+     "doctor.eyebrow": "Uzmanımız",
+"doctor.title": "Baş Ortodontistimiz ile Tanışın",
+"doctor.name": "Dr. Zumri Bitri, PhD, DDS, MSc",
+"doctor.position": "Ortodonti ve Estetik Diş Hekimliği Uzmanı",
+"doctor.bio": "Dr. Zumri Bitri, ortodonti ve estetik diş hekimliği alanlarında geniş deneyime sahip, yüksek nitelikli bir uzmandır. Mükemmelliğe, yeniliğe ve hasta odaklı bakıma olan bağlılığı sayesinde birçok hastanın daha sağlıklı ve daha özgüvenli gülüşlere kavuşmasına yardımcı olmuştur. Sürekli mesleki gelişim ve modern diş teknolojilerinin kullanımıyla her hasta için kişiselleştirilmiş tedavi planları sunmaktadır.",
+"doctor.educationTitle": "Eğitim ve Nitelikler",
+"doctor.edu1": "Doktora (PhD)",
+"doctor.edu2": "Diş Hekimliği Doktoru (DDS)",
+"doctor.edu3": "Fen Bilimleri Yüksek Lisansı (MSc)",
+"doctor.edu4": "Ortodonti Uzmanı",
+"doctor.edu5": "Estetik Diş Hekimliği Alanında İleri Eğitimler",
   }
 };
 
