@@ -64,49 +64,142 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; line-hei
   backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid var(--line);
 }
+
 .header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 80px; /* slightly taller header */
 }
-.brand { font-family: 'Fraunces', serif; font-size: 24px; font-weight: 600; letter-spacing: -.02em; }
-.brand__mark { color: var(--accent); }
-.brand__rest { color: var(--text); margin-left: 2px; }
-.brand--light .brand__rest { color: var(--white); }
-.brand__logo {
-  height: 40px;
-  width: auto;
-  object-fit: contain;
-}
+
+/* ===== Brand ===== */
 .brand {
   display: flex;
   align-items: center;
   gap: 8px;
   text-decoration: none;
+  overflow: visible;
 }
-.nav { display: flex; gap: 32px; }
-.nav a { font-size: 15px; font-weight: 500; color: var(--muted); transition: color .2s ease; }
-.nav a:hover { color: var(--accent); }
 
-.header__actions { display: flex; align-items: center; gap: 16px; }
+.brand__logo {
+  height: 60px;      /* increase logo size */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
 
-.lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+/* Alternative:
+.brand__logo {
+  height: 40px;
+  width: auto;
+  transform: scale(1.4);
+  transform-origin: left center;
+}
+*/
+
+.brand__mark {
+  color: var(--accent);
+}
+
+.brand__rest {
+  color: var(--text);
+  margin-left: 2px;
+}
+
+.brand--light .brand__rest {
+  color: var(--white);
+}
+
+/* ===== Navigation ===== */
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nav a {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--muted);
+  transition: color .2s ease;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+/* ===== Header Actions ===== */
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ===== Language Switcher ===== */
+.lang {
+  display: inline-flex;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
 .lang__btn {
-  background: transparent; border: none; cursor: pointer;
-  padding: 7px 12px; font-size: 13px; font-weight: 600; color: var(--muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 7px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
   transition: background .2s ease, color .2s ease;
 }
-.lang__btn:hover { color: var(--accent); }
-.lang__btn.is-active { background: var(--accent); color: var(--white); }
 
-.menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 6px; }
-.menu-toggle span { width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: .3s; }
+.lang__btn:hover {
+  color: var(--accent);
+}
 
-.mobile-nav { display: none; flex-direction: column; padding: 8px 24px 20px; border-bottom: 1px solid var(--line); background: var(--white); }
-.mobile-nav a { padding: 12px 0; font-weight: 500; color: var(--text); border-bottom: 1px solid var(--line); }
-.mobile-nav.is-open { display: flex; }
+.lang__btn.is-active {
+  background: var(--accent);
+  color: var(--white);
+}
 
+/* ===== Mobile Menu Toggle ===== */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.menu-toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: .3s;
+}
+
+/* ===== Mobile Navigation ===== */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  padding: 8px 24px 20px;
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+}
+
+.mobile-nav a {
+  padding: 12px 0;
+  font-weight: 500;
+  color: var(--text);
+  border-bottom: 1px solid var(--line);
+}
+
+.mobile-nav.is-open {
+  display: flex;
+}
 /* ===== Hero ===== */
 .hero { position: relative; min-height: 92vh; display: flex; align-items: center; overflow: hidden; }
 .hero__media { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: var(--accent-dark) url('/images/hero.png') center/cover no-repeat; }
