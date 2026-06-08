@@ -334,5 +334,27 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+const doctorPhotos = [
+  "images/zumri1.jpg",
+  "images/zumri2.jpg",
+  "images/zumri3.jpg",
+  "images/zumri4.jpg"
+];
+
+let doctorIndex = 0;
+
+const doctorImage = document.getElementById("doctorImage");
+
+document.getElementById("nextDoctor").addEventListener("click", () => {
+  doctorIndex = (doctorIndex + 1) % doctorPhotos.length;
+  doctorImage.src = doctorPhotos[doctorIndex];
+});
+
+document.getElementById("prevDoctor").addEventListener("click", () => {
+  doctorIndex = (doctorIndex - 1 + doctorPhotos.length) % doctorPhotos.length;
+  doctorImage.src = doctorPhotos[doctorIndex];
+});
+</script>
 </body>
 </html>
