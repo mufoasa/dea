@@ -345,7 +345,11 @@ h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; font-weight: 500; line-hei
 .gallery__inner { display: flex; gap: 20px; width: max-content; will-change: transform; }
 .gallery__item { width: 380px; max-width: 80vw; flex: 0 0 auto; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
 .gallery__item img { width: 100%; height: 260px; object-fit: cover; pointer-events: none; }
-
+.gallery__actions{
+  display:flex;
+  justify-content:center;
+  margin-top:32px;
+}
 /* ===== Contact ===== */
 .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
 .contact__list { list-style: none; margin-top: 28px; display: grid; gap: 18px; }
