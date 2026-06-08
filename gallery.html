@@ -74,6 +74,31 @@
   transform:translateY(-6px);
   box-shadow:var(--shadow-hover);
 }
+
+.gallery-filters{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:0 auto 40px;
+  width:min(1400px,92%);
+}
+
+.filter-btn{
+  border:none;
+  padding:12px 24px;
+  border-radius:999px;
+  background:#f3f4f6;
+  cursor:pointer;
+  font-weight:600;
+  transition:.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+  background:#b78a56;
+  color:#fff;
+}
 </style>
 </head>
 
@@ -113,49 +138,148 @@
 
 <section>
 
+<!-- FILTER BUTTONS -->
+<div class="gallery-filters">
+  <button class="filter-btn active" data-filter="all">Të Gjitha</button>
+  <button class="filter-btn" data-filter="ortodonci">Ortodonci</button>
+  <button class="filter-btn" data-filter="protetik">Protetikë</button>
+  <button class="filter-btn" data-filter="implantologji">Implantologji</button>
+  <button class="filter-btn" data-filter="endodonci">Endodonci</button>
+</div>
+
+<!-- GALLERY -->
 <div class="gallery-grid">
 
-  <div class="gallery-item"><img src="https://i.imgur.com/rQV6n4t.jpeg" alt=""></div>
+  <!-- ORTODONCI -->
+  <div class="gallery-item ortodonci">
+    <img src="https://i.imgur.com/rQV6n4t.jpeg" alt="Ortodonci">
+  </div>
 
-  <div class="gallery-item">
+  <div class="gallery-item ortodonci">
     <video controls preload="metadata" playsinline>
       <source src="video1.mp4" type="video/mp4">
     </video>
   </div>
 
-  <div class="gallery-item"><img src="https://i.imgur.com/STuyWwk.jpeg" alt=""></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/CuFafmp.jpeg" alt=""></div>
+  <div class="gallery-item ortodonci">
+    <img src="https://i.imgur.com/STuyWwk.jpeg" alt="Ortodonci">
+  </div>
 
-  <div class="gallery-item"><img src="https://i.imgur.com/7d9X7YG.jpeg" alt=""></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/o8MZr1F.jpeg" alt=""></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/PophjnO.jpeg" alt=""></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/lcP5q7a.jpeg" alt=""></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/rOFCN62.jpeg" alt=""></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/Xpe6WG9.jpeg" alt=""></div>
-    <div class="gallery-item">
+  <div class="gallery-item ortodonci">
+    <img src="https://i.imgur.com/CuFafmp.jpeg" alt="Ortodonci">
+  </div>
+
+
+  <!-- PROTETIK -->
+  <div class="gallery-item protetik">
+    <img src="https://i.imgur.com/7d9X7YG.jpeg" alt="Protetik">
+  </div>
+
+  <div class="gallery-item protetik">
+    <img src="https://i.imgur.com/o8MZr1F.jpeg" alt="Protetik">
+  </div>
+
+  <div class="gallery-item protetik">
+    <img src="https://i.imgur.com/PophjnO.jpeg" alt="Protetik">
+  </div>
+
+  <div class="gallery-item protetik">
+    <img src="https://i.imgur.com/lcP5q7a.jpeg" alt="Protetik">
+  </div>
+
+
+  <!-- IMPLANTOLOGJI -->
+  <div class="gallery-item implantologji">
+    <img src="https://i.imgur.com/rOFCN62.jpeg" alt="Implantologji">
+  </div>
+
+  <div class="gallery-item implantologji">
+    <img src="https://i.imgur.com/Xpe6WG9.jpeg" alt="Implantologji">
+  </div>
+
+  <div class="gallery-item implantologji">
     <video controls preload="metadata" playsinline>
       <source src="video3.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="gallery-item"><img src="https://i.imgur.com/4NEYXn5.jpeg" alt=""></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/o7fA1Hm.jpeg" alt=""></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/dtA7Ccs.jpeg" alt=""></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/Y7gAcJJ.jpeg" alt=""></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/IXWmdCf.jpeg" alt=""></div>
-    <div class="gallery-item">
+
+  <div class="gallery-item implantologji">
+    <img src="https://i.imgur.com/4NEYXn5.jpeg" alt="Implantologji">
+  </div>
+
+  <div class="gallery-item implantologji">
+    <img src="https://i.imgur.com/o7fA1Hm.jpeg" alt="Implantologji">
+  </div>
+
+
+  <!-- ENDODONCI -->
+  <div class="gallery-item endodonci">
+    <img src="https://i.imgur.com/dtA7Ccs.jpeg" alt="Endodonci">
+  </div>
+
+  <div class="gallery-item endodonci">
+    <img src="https://i.imgur.com/Y7gAcJJ.jpeg" alt="Endodonci">
+  </div>
+
+  <div class="gallery-item endodonci">
+    <img src="https://i.imgur.com/IXWmdCf.jpeg" alt="Endodonci">
+  </div>
+
+  <div class="gallery-item endodonci">
     <video controls preload="metadata" playsinline>
       <source src="video2.mp4" type="video/mp4">
     </video>
   </div>
-  <div class="gallery-item"><img src="https://i.imgur.com/fA2Okga.jpeg" alt=""></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/Dwspfie.jpeg" alt=""></div>
-  <div class="gallery-item"><img src="https://i.imgur.com/oyMs38c.jpeg" alt=""></div>
+
+  <div class="gallery-item endodonci">
+    <img src="https://i.imgur.com/fA2Okga.jpeg" alt="Endodonci">
+  </div>
+
+  <div class="gallery-item endodonci">
+    <img src="https://i.imgur.com/Dwspfie.jpeg" alt="Endodonci">
+  </div>
+
+  <div class="gallery-item endodonci">
+    <img src="https://i.imgur.com/oyMs38c.jpeg" alt="Endodonci">
+  </div>
 
 </div>
 
 </section>
 
 <script src="script.js"></script>
+<script>
+const filterButtons = document.querySelectorAll(".filter-btn");
+const galleryItems = document.querySelectorAll(".gallery-item");
 
+filterButtons.forEach(button => {
+
+  button.addEventListener("click", () => {
+
+    filterButtons.forEach(btn =>
+      btn.classList.remove("active")
+    );
+
+    button.classList.add("active");
+
+    const filter = button.dataset.filter;
+
+    galleryItems.forEach(item => {
+
+      if(filter === "all"){
+        item.style.display = "block";
+      } else {
+        item.style.display =
+          item.classList.contains(filter)
+            ? "block"
+            : "none";
+      }
+
+    });
+
+  });
+
+});
+</script>
 </body>
 </html>
