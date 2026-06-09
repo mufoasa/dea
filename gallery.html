@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
+html{scroll-padding-top:180px}
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
 :root{
@@ -68,9 +70,19 @@ body{
 }
 .nav-cta:hover{background:var(--navy-mid)!important}
 
+.lang{display:flex;gap:4px;margin-left:16px}
+.lang__btn{
+  border:1.5px solid transparent;background:none;
+  padding:5px 10px;border-radius:6px;
+  font-size:12px;font-weight:600;color:var(--muted);
+  cursor:pointer;font-family:"DM Sans",sans-serif;transition:all .2s;
+}
+.lang__btn:hover{color:var(--navy);border-color:rgba(10,45,74,.2)}
+.lang__btn.is-active{color:var(--navy);border-color:var(--navy);background:var(--sky)}
+
 /* ─── HERO ─── */
 .hero{
-  padding:140px 40px 90px;
+  padding:168px 40px 90px;
   background:var(--white);
   text-align:center;
   border-bottom:1px solid rgba(10,45,74,.07);
@@ -163,7 +175,7 @@ body{
 /* ─── SECTION BANNERS ─── */
 .section-banner{
   display:none;
-  margin:36px 40px 0;
+  margin:48px 40px 0;
   padding:26px 32px;
   background:var(--white);
   border-radius:var(--radius);
@@ -196,7 +208,7 @@ body{
 /* ─── GALLERY ─── */
 .gallery-wrap{
   width:min(1400px,100%);
-  margin:36px auto 80px;
+  margin:72px auto 80px;
   padding:0 40px;
 }
 .gallery-grid{
@@ -219,6 +231,44 @@ body{
   width:100%;display:block;
 }
 .gallery-item video{background:#000}
+
+/* Team card styles — hidden by default, shown only via filter */
+.gallery-item.team{display:none}
+.team-card{
+  padding:28px 24px;
+  display:flex;flex-direction:column;align-items:center;
+  text-align:center;gap:12px;
+}
+.team-avatar{
+  width:90px;height:90px;border-radius:50%;
+  object-fit:cover;border:3px solid var(--accent-light);
+}
+.team-avatar-placeholder{
+  width:90px;height:90px;border-radius:50%;
+  background:var(--accent-light);
+  display:flex;align-items:center;justify-content:center;
+  font-family:"DM Serif Display",serif;
+  font-size:28px;color:var(--accent);
+  flex-shrink:0;
+}
+.team-name{
+  font-family:"DM Serif Display",serif;
+  font-size:1.05rem;color:var(--navy);line-height:1.3;
+}
+.team-role{
+  font-size:12px;font-weight:600;letter-spacing:.6px;
+  text-transform:uppercase;color:var(--accent);
+}
+.team-bio{
+  font-size:13px;color:var(--muted);line-height:1.65;
+}
+.team-badge{
+  display:inline-block;
+  background:var(--sky);color:var(--navy-mid);
+  font-size:11px;font-weight:600;padding:4px 12px;
+  border-radius:999px;
+}
+
 .item-caption{
   padding:11px 16px;
   font-size:11.5px;font-weight:600;
@@ -251,9 +301,9 @@ body{
 
 /* ─── RESPONSIVE ─── */
 @media(max-width:640px){
-  .header{padding:0 20px}
+  .header{padding:0 16px}
   .nav-links a:not(.nav-cta){display:none}
-  .hero{padding:110px 24px 60px}
+  .hero{padding:130px 24px 60px}
   .filter-section{padding:20px 20px 0}
   .gallery-wrap{padding:0 20px}
   .section-banner{margin:24px 20px 0;padding:20px}
@@ -273,40 +323,35 @@ body{
     </div>
   </a>
   <nav class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Our Team</a>
-    <a href="#" class="nav-cta">Book Appointment</a>
+    <a href="index.html#services" data-i18n="nav.services">Shërbimet</a>
+    <a href="index.html#contact" data-i18n="nav.book">Rezervo termin</a>
+    <a href="index.html#contact" class="nav-cta" data-i18n="gallerypage.bookBtn">Rezervo termin</a>
   </nav>
+  <div class="lang">
+    <button class="lang__btn is-active" data-lang="sq">SQ</button>
+    <button class="lang__btn" data-lang="mk">MK</button>
+    <button class="lang__btn" data-lang="tr">TR</button>
+  </div>
 </header>
 
-<!-- ─── HERO ─── -->
+<!-- ─── HERO ─── */
 <section class="hero">
-  <div class="hero-eyebrow"><span></span>Our Work</div>
-  <h1>Results that speak<br>for <em>themselves</em></h1>
-  <p>Browse real cases treated at DEA Dent — from orthodontic corrections to implants and prosthetics. Every image reflects our commitment to precision and lasting results.</p>
-  <a href="index.html" class="hero-back">← Back to Home</a>
+  <div class="hero-eyebrow"><span></span><span data-i18n="gallerypage.eyebrow">Galeria jonë</span></div>
+  <h1 data-i18n="gallerypage.title">Rezultate që <em>flasin</em> vetë</h1>
+  <p data-i18n="gallerypage.subtitle">Shfletoni raste reale të trajtuara në DEA Dent — nga korrektimet ortodontike deri te implantet dhe protetika. Çdo imazh pasqyron angazhimin tonë ndaj precizionit dhe rezultateve të qëndrueshme.</p>
+  <a href="index.html" class="hero-back" data-i18n="gallerypage.back">← Kthehu në shtëpi</a>
 </section>
 
 <!-- ─── FILTER BAR ─── -->
 <div class="filter-section">
-  <div class="filter-label">Filter by treatment</div>
+  <div class="filter-label" data-i18n="gallerypage.filterLabel">Filtro sipas trajtimit</div>
   <div class="filter-tabs">
-    <button class="filter-tab active" data-filter="all">
-      <span class="dot"></span> All Cases
-    </button>
-    <button class="filter-tab" data-filter="ortodonci">
-      <span class="dot"></span> Orthodontics
-    </button>
-    <button class="filter-tab" data-filter="protetik">
-      <span class="dot"></span> Prosthetics
-    </button>
-    <button class="filter-tab" data-filter="implantologji">
-      <span class="dot"></span> Implantology
-    </button>
-    <button class="filter-tab" data-filter="endodonci">
-      <span class="dot"></span> Endodontics
-    </button>
+    <button class="filter-tab active" data-filter="all" data-i18n="gallerypage.filterAll">Të gjitha rastet</button>
+    <button class="filter-tab" data-filter="ortodonci" data-i18n="gallerypage.filterOrtho">Ortodonci</button>
+    <button class="filter-tab" data-filter="protetik" data-i18n="gallerypage.filterPros">Protetikë</button>
+    <button class="filter-tab" data-filter="implantologji" data-i18n="gallerypage.filterImpl">Implantologji</button>
+    <button class="filter-tab" data-filter="endodonci" data-i18n="gallerypage.filterEndo">Endodonci</button>
+    <button class="filter-tab" data-filter="team" data-i18n="gallerypage.filterTeam">Ekipi ynë</button>
   </div>
 </div>
 
@@ -314,32 +359,40 @@ body{
 <div class="section-banner" id="banner-ortodonci">
   <div class="banner-icon">🦷</div>
   <div class="banner-text">
-    <h2>Orthodontic Treatment</h2>
-    <p>Straightening teeth isn't just about aesthetics — it improves bite function, oral hygiene, and long-term dental health. At DEA Dent, we use modern fixed and removable systems tailored to each patient's anatomy and goals.</p>
+    <h2 data-i18n="gallerypage.banner.ortodonci.title">Trajtimi Ortodontik</h2>
+    <p data-i18n="gallerypage.banner.ortodonci.text">Drejtimi i dhëmbëve nuk ka të bëjë vetëm me estetikën — ai përmirëson funksionin e kafshimit, higjienën orale dhe shëndetin dentar afatgjatë. Në DEA Dent, përdorim sisteme moderne fikse dhe të lëvizshme të përshtatura për anatominë dhe qëllimet e çdo pacienti.</p>
   </div>
 </div>
 
 <div class="section-banner" id="banner-protetik">
   <div class="banner-icon">✨</div>
   <div class="banner-text">
-    <h2>Prosthetic Dentistry</h2>
-    <p>From single crowns to full arch restorations, our prosthetic solutions are crafted for natural appearance and lasting durability. We work with certified dental laboratories to ensure every case meets the highest standards.</p>
+    <h2 data-i18n="gallerypage.banner.protetik.title">Dentistëria Protetike</h2>
+    <p data-i18n="gallerypage.banner.protetik.text">Nga kurorë të vetëm deri te restaurimet e harqeve të plota, zgjidhjet tona protetike janë krijuar për pamje natyrale dhe qëndrueshmëri afatgjatë. Bashkëpunojmë me laboratorë të certifikuar dentar për të siguruar që çdo rast plotëson standardet më të larta.</p>
   </div>
 </div>
 
 <div class="section-banner" id="banner-implantologji">
   <div class="banner-icon">🔩</div>
   <div class="banner-text">
-    <h2>Implantology</h2>
-    <p>Dental implants offer a permanent, bone-anchored solution for missing teeth. Our implantologists perform thorough planning using 3D imaging to ensure precision placement and optimal osseointegration outcomes.</p>
+    <h2 data-i18n="gallerypage.banner.implantologji.title">Implantologji</h2>
+    <p data-i18n="gallerypage.banner.implantologji.text">Implantet dentare ofrojnë një zgjidhje të përhershme, të ankoruar në kocë, për dhëmbët e munguar. Implantologët tanë kryejnë planifikim të plotë duke përdorur imazhe 3D për të siguruar vendosje të saktë dhe rezultate optimale të oseointegrimit.</p>
   </div>
 </div>
 
 <div class="section-banner" id="banner-endodonci">
   <div class="banner-icon">🔬</div>
   <div class="banner-text">
-    <h2>Endodontics</h2>
-    <p>Root canal treatment performed with care and precision. Using rotary systems and digital apex locators, our endodontists preserve natural teeth that would otherwise require extraction — maximizing your long-term dental health.</p>
+    <h2 data-i18n="gallerypage.banner.endodonci.title">Endodonci</h2>
+    <p data-i18n="gallerypage.banner.endodonci.text">Trajtimi i kanalit të rrënjës i kryer me kujdes dhe precizion. Duke përdorur sisteme rrotulluese dhe lokalizues apikal dixhital, endodontistët tanë ruajnë dhëmbët natyralë që përndryshe do të kërkonin heqje — duke maksimizuar shëndetin tuaj dentar afatgjatë.</p>
+  </div>
+</div>
+
+<div class="section-banner" id="banner-team">
+  <div class="banner-icon">👥</div>
+  <div class="banner-text">
+    <h2 data-i18n="gallerypage.banner.team.title">Ekipi ynë</h2>
+    <p data-i18n="gallerypage.banner.team.text">Njihuni me specialistët e kualifikuar që qëndrojnë pas çdo buzëqeshjeje të shëndetshme. Ekipi ynë kombinon vite përvojë me trajnim të vazhdueshëm profesional për t'ju ofruar kujdesin më të mirë të mundshëm.</p>
   </div>
 </div>
 
@@ -347,114 +400,151 @@ body{
 <div class="gallery-wrap">
   <div class="gallery-grid">
 
+    <!-- TEAM (hidden in "all", shown only via team filter) -->
+    <div class="gallery-item team">
+      <div class="team-card">
+        <div class="team-avatar-placeholder">ZB</div>
+        <div>
+          <div class="team-name" data-i18n="doctor.name">Dr. Zumri Bitri, PhD, DDS, MSc</div>
+          <div class="team-role" data-i18n="doctor.position">Specialist në Ortodonci dhe Stomatologji Estetike</div>
+        </div>
+        <p class="team-bio" data-i18n="gallerypage.team.dr1.bio">Specialist i kualifikuar me përvojë të gjerë në ortodonci dhe stomatologji estetike. Ofron plane trajtimi të personalizuara duke përdorur teknologji moderne dentare.</p>
+        <span class="team-badge" data-i18n="gallerypage.team.badge.lead">Ortodont Kryesor</span>
+      </div>
+    </div>
+
+    <div class="gallery-item team">
+      <div class="team-card">
+        <div class="team-avatar-placeholder">AD</div>
+        <div>
+          <div class="team-name" data-i18n="gallerypage.team.dr2.name">Dr. Arta Demi, DDS</div>
+          <div class="team-role" data-i18n="gallerypage.team.dr2.role">Specialiste në Implantologji</div>
+        </div>
+        <p class="team-bio" data-i18n="gallerypage.team.dr2.bio">Me specializim në implante dentare dhe kirurgji orale, Dr. Demi siguron rezultate precize dhe të qëndrueshme për çdo pacient.</p>
+        <span class="team-badge" data-i18n="gallerypage.team.badge.impl">Implantologe</span>
+      </div>
+    </div>
+
+    <div class="gallery-item team">
+      <div class="team-card">
+        <div class="team-avatar-placeholder">BK</div>
+        <div>
+          <div class="team-name" data-i18n="gallerypage.team.dr3.name">Dr. Besnik Krasniqi, DDS, MSc</div>
+          <div class="team-role" data-i18n="gallerypage.team.dr3.role">Specialist në Endodonci</div>
+        </div>
+        <p class="team-bio" data-i18n="gallerypage.team.dr3.bio">Specialist i dedikuar në trajtimin e kanalit të rrënjës, duke ruajtur dhëmbët natyralë me teknikat më të avancuara endodontike.</p>
+        <span class="team-badge" data-i18n="gallerypage.team.badge.endo">Endodontist</span>
+      </div>
+    </div>
+
     <!-- ORTHODONTICS -->
     <div class="gallery-item ortodonci">
       <img src="https://i.imgur.com/rQV6n4t.jpeg" alt="Orthodontics case">
-      <div class="item-caption">Orthodontics</div>
+      <div class="item-caption" data-i18n="gallerypage.filterOrtho">Ortodonci</div>
     </div>
 
     <div class="gallery-item ortodonci">
       <video controls preload="metadata" playsinline>
         <source src="video1.mp4" type="video/mp4">
       </video>
-      <div class="item-caption">Orthodontics</div>
+      <div class="item-caption" data-i18n="gallerypage.filterOrtho">Ortodonci</div>
     </div>
 
     <div class="gallery-item ortodonci">
       <img src="https://i.imgur.com/STuyWwk.jpeg" alt="Orthodontics case">
-      <div class="item-caption">Orthodontics</div>
+      <div class="item-caption" data-i18n="gallerypage.filterOrtho">Ortodonci</div>
     </div>
 
     <div class="gallery-item ortodonci">
       <img src="https://i.imgur.com/CuFafmp.jpeg" alt="Orthodontics case">
-      <div class="item-caption">Orthodontics</div>
+      <div class="item-caption" data-i18n="gallerypage.filterOrtho">Ortodonci</div>
     </div>
 
     <!-- PROSTHETICS -->
     <div class="gallery-item protetik">
       <img src="https://i.imgur.com/7d9X7YG.jpeg" alt="Prosthetics case">
-      <div class="item-caption">Prosthetics</div>
+      <div class="item-caption" data-i18n="gallerypage.filterPros">Protetikë</div>
     </div>
 
     <div class="gallery-item protetik">
       <img src="https://i.imgur.com/o8MZr1F.jpeg" alt="Prosthetics case">
-      <div class="item-caption">Prosthetics</div>
+      <div class="item-caption" data-i18n="gallerypage.filterPros">Protetikë</div>
     </div>
 
     <div class="gallery-item protetik">
       <img src="https://i.imgur.com/PophjnO.jpeg" alt="Prosthetics case">
-      <div class="item-caption">Prosthetics</div>
+      <div class="item-caption" data-i18n="gallerypage.filterPros">Protetikë</div>
     </div>
 
     <div class="gallery-item protetik">
       <img src="https://i.imgur.com/lcP5q7a.jpeg" alt="Prosthetics case">
-      <div class="item-caption">Prosthetics</div>
+      <div class="item-caption" data-i18n="gallerypage.filterPros">Protetikë</div>
     </div>
 
     <!-- IMPLANTOLOGY -->
     <div class="gallery-item implantologji">
       <img src="https://i.imgur.com/rOFCN62.jpeg" alt="Implantology case">
-      <div class="item-caption">Implantology</div>
+      <div class="item-caption" data-i18n="gallerypage.filterImpl">Implantologji</div>
     </div>
 
     <div class="gallery-item implantologji">
       <img src="https://i.imgur.com/Xpe6WG9.jpeg" alt="Implantology case">
-      <div class="item-caption">Implantology</div>
+      <div class="item-caption" data-i18n="gallerypage.filterImpl">Implantologji</div>
     </div>
 
     <div class="gallery-item implantologji">
       <video controls preload="metadata" playsinline>
         <source src="video3.mp4" type="video/mp4">
       </video>
-      <div class="item-caption">Implantology</div>
+      <div class="item-caption" data-i18n="gallerypage.filterImpl">Implantologji</div>
     </div>
 
     <div class="gallery-item implantologji">
       <img src="https://i.imgur.com/4NEYXn5.jpeg" alt="Implantology case">
-      <div class="item-caption">Implantology</div>
+      <div class="item-caption" data-i18n="gallerypage.filterImpl">Implantologji</div>
     </div>
 
     <div class="gallery-item implantologji">
       <img src="https://i.imgur.com/o7fA1Hm.jpeg" alt="Implantology case">
-      <div class="item-caption">Implantology</div>
+      <div class="item-caption" data-i18n="gallerypage.filterImpl">Implantologji</div>
     </div>
 
     <!-- ENDODONTICS -->
     <div class="gallery-item endodonci">
       <img src="https://i.imgur.com/dtA7Ccs.jpeg" alt="Endodontics case">
-      <div class="item-caption">Endodontics</div>
+      <div class="item-caption" data-i18n="gallerypage.filterEndo">Endodonci</div>
     </div>
 
     <div class="gallery-item endodonci">
       <img src="https://i.imgur.com/Y7gAcJJ.jpeg" alt="Endodontics case">
-      <div class="item-caption">Endodontics</div>
+      <div class="item-caption" data-i18n="gallerypage.filterEndo">Endodonci</div>
     </div>
 
     <div class="gallery-item endodonci">
       <img src="https://i.imgur.com/IXWmdCf.jpeg" alt="Endodontics case">
-      <div class="item-caption">Endodontics</div>
+      <div class="item-caption" data-i18n="gallerypage.filterEndo">Endodonci</div>
     </div>
 
     <div class="gallery-item endodonci">
       <video controls preload="metadata" playsinline>
         <source src="video2.mp4" type="video/mp4">
       </video>
-      <div class="item-caption">Endodontics</div>
+      <div class="item-caption" data-i18n="gallerypage.filterEndo">Endodonci</div>
     </div>
 
     <div class="gallery-item endodonci">
       <img src="https://i.imgur.com/fA2Okga.jpeg" alt="Endodontics case">
-      <div class="item-caption">Endodontics</div>
+      <div class="item-caption" data-i18n="gallerypage.filterEndo">Endodonci</div>
     </div>
 
     <div class="gallery-item endodonci">
       <img src="https://i.imgur.com/Dwspfie.jpeg" alt="Endodontics case">
-      <div class="item-caption">Endodontics</div>
+      <div class="item-caption" data-i18n="gallerypage.filterEndo">Endodonci</div>
     </div>
 
     <div class="gallery-item endodonci">
       <img src="https://i.imgur.com/oyMs38c.jpeg" alt="Endodontics case">
-      <div class="item-caption">Endodontics</div>
+      <div class="item-caption" data-i18n="gallerypage.filterEndo">Endodonci</div>
     </div>
 
   </div>
@@ -462,12 +552,12 @@ body{
 
 <!-- ─── FOOTER CTA ─── -->
 <div class="footer-cta">
-  <h2>Ready to start your treatment?</h2>
-  <p>Schedule a consultation with our specialists. We'll assess your case and recommend the best approach for you.</p>
-  <a href="index.html">Book a Consultation →</a>
+  <h2 data-i18n="gallerypage.cta.title">Gati për të filluar trajtimin tuaj?</h2>
+  <p data-i18n="gallerypage.cta.text">Caktoni një konsultë me specialistët tanë. Ne do të vlerësojmë rastin tuaj dhe do të rekomandojmë qasjen më të mirë.</p>
+  <a href="index.html#contact" data-i18n="gallerypage.cta.btn">Rezervo konsultë →</a>
 </div>
 
-<!-- ─── SCRIPT ─── -->
+<!-- ─── SCRIPTS ─── -->
 <script src="script.js"></script>
 <script>
 const tabs = document.querySelectorAll(".filter-tab");
@@ -488,10 +578,11 @@ tabs.forEach(tab => {
     }
 
     items.forEach(item => {
-      item.style.display =
-        (filter === "all" || item.classList.contains(filter))
-          ? "block"
-          : "none";
+      if (filter === "all") {
+        item.style.display = item.classList.contains("team") ? "none" : "block";
+      } else {
+        item.style.display = item.classList.contains(filter) ? "block" : "none";
+      }
     });
   });
 });
