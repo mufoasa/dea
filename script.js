@@ -2,21 +2,21 @@
 
 const translations = {
   sq: {
-    /* ── Navigation ── */
+    
     "nav.about":   "Rreth nesh",
     "nav.services":"Shërbimet",
     "nav.gallery": "Galeria",
     "nav.contact": "Kontakti",
     "nav.book":    "Rezervo termin",
 
-    /* ── Hero ── */
+    
     "hero.eyebrow":  "Gostivar, Maqedonia e Veriut",
     "hero.title":    "DEA Dent — Kujdes dentar modern në Gostivar",
     "hero.subtitle": "Besim, rehati dhe stomatologji moderne. Kombinojmë teknologjinë e avancuar me një qasje të butë, ku pacienti vjen i pari.",
     "hero.book":     "Rezervo termin",
     "hero.services": "Shiko shërbimet",
 
-    /* ── About ── */
+    
     "about.eyebrow": "Rreth klinikës",
     "about.title":   "Një klinikë moderne e ndërtuar rreth rehatisë suaj",
     "about.body":    "Në DEA Dent bashkojmë pajisje moderne, dentistë me përvojë dhe një mjedis të qetë e higjienik. Çdo trajtim planifikohet me saktësi dhe ofrohet me kujdes, që vizita juaj të jetë e rehatshme nga fillimi deri në fund.",
@@ -28,7 +28,7 @@ const translations = {
     "about.stat2":   "Pacientë të trajtuar",
     "about.stat3":   "Trajtime të kryera",
 
-    /* ── Services ── */
+    
     "services.eyebrow":   "Shërbimet tona",
     "services.title":     "Kujdes i plotë nën një çati",
     "services.s1.title":  "Stomatologji e përgjithshme",
@@ -44,12 +44,12 @@ const translations = {
     "services.s6.title":  "Kujdes parandalues",
     "services.s6.text":   "Pastrime dhe këshilla për ta mbajtur buzëqeshjen tuaj të shëndetshme.",
 
-    /* ── Gallery (homepage strip) ── */
+    
     "gallery.eyebrow": "Brenda DEA Dent",
     "gallery.title":   "Një vështrim në klinikën tonë",
     "gallery.viewAll": "Shiko Galerinë e Plotë",
 
-    /* ── Contact ── */
+    
     "contact.eyebrow":      "Na kontaktoni",
     "contact.title":        "Rezervoni vizitën tuaj",
     "contact.body":         "Me kënaqësi u përgjigjemi pyetjeve tuaja dhe ju ndihmojmë të caktoni një termin që ju përshtatet.",
@@ -64,11 +64,11 @@ const translations = {
     "contact.send":         "Dërgo mesazhin",
     "contact.success":      "Faleminderit — do t'ju kontaktojmë së shpejti.",
 
-    /* ── Footer ── */
+    
     "footer.tag":    "Kujdes dentar modern në Gostivar.",
     "footer.rights": "Të gjitha të drejtat e rezervuara.",
 
-    /* ── Doctor ── */
+    
     "doctor.eyebrow":       "Specialisti ynë",
     "doctor.title":         "Njihuni me Ortodontin Tonë Kryesor",
     "doctor.name":          "Dr. Zumri Bitri, PhD, DDS, MSc",
@@ -81,7 +81,7 @@ const translations = {
     "doctor.edu4":          "Specialist në Ortodonci",
     "doctor.edu5":          "Trajnime të Avancuara në Stomatologji Estetike",
 
-    /* ── Gallery page ── */
+   
     "gallerypage.eyebrow":  "Galeria jonë",
     "gallerypage.title":    "Rezultate që flasin vetë",
     "gallerypage.subtitle": "Shfletoni raste reale të trajtuara në DEA Dent — nga korrektimet ortodontike deri te implantet dhe protetika. Çdo imazh pasqyron angazhimin tonë ndaj precizionit dhe rezultateve të qëndrueshme.",
@@ -123,21 +123,21 @@ const translations = {
   },
 
   mk: {
-    /* ── Navigation ── */
+    
     "nav.about":   "За нас",
     "nav.services":"Услуги",
     "nav.gallery": "Галерија",
     "nav.contact": "Контакт",
     "nav.book":    "Закажи термин",
 
-    /* ── Hero ── */
+    
     "hero.eyebrow":  "Гостивар, Северна Македонија",
     "hero.title":    "DEA Dent — Модерна стоматолошка нега во Гостивар",
     "hero.subtitle": "Доверба, удобност и модерна стоматологија. Ја комбинираме напредната технологија со внимателен пристап насочен кон пациентот.",
     "hero.book":     "Закажи термин",
     "hero.services": "Погледни услуги",
 
-    /* ── About ── */
+    
     "about.eyebrow": "За клиниката",
     "about.title":   "Модерна клиника создадена околу вашата удобност",
     "about.body":    "Во DEA Dent спојуваме модерна опрема, искусни стоматолози и мирна, хигиенска средина. Секој третман се планира прецизно и се изведува со грижа, за вашата посета да биде пријатна од почеток до крај.",
@@ -149,7 +149,7 @@ const translations = {
     "about.stat2":   "Третирани пациенти",
     "about.stat3":   "Изведени третмани",
 
-    /* ── Services ── */
+   
     "services.eyebrow":   "Нашите услуги",
     "services.title":     "Целосна нега под еден покрив",
     "services.s1.title":  "Општа стоматологија",
@@ -165,12 +165,12 @@ const translations = {
     "services.s6.title":  "Превентивна нега",
     "services.s6.text":   "Чистења и совети за здрава насмевка за цел живот.",
 
-    /* ── Gallery (homepage strip) ── */
+    
     "gallery.eyebrow": "Внатре во DEA Dent",
     "gallery.title":   "Поглед во нашата клиника",
     "gallery.viewAll": "Погледни ја целата галерија",
 
-    /* ── Contact ── */
+    
     "contact.eyebrow":      "Контактирајте нè",
     "contact.title":        "Закажете ја вашата посета",
     "contact.body":         "Со задоволство ќе одговориме на вашите прашања и ќе ви помогнеме да закажете термин што ви одговара.",
@@ -185,11 +185,11 @@ const translations = {
     "contact.send":         "Испрати порака",
     "contact.success":      "Ви благодариме — наскоро ќе ве контактираме.",
 
-    /* ── Footer ── */
+    
     "footer.tag":    "Модерна стоматолошка нега во Гостивар.",
     "footer.rights": "Сите права задржани.",
 
-    /* ── Doctor ── */
+    
     "doctor.eyebrow":       "Наш специјалист",
     "doctor.title":         "Запознајте го нашиот главен ортодонт",
     "doctor.name":          "Д-р Зумри Битри, PhD, DDS, MSc",
@@ -202,7 +202,7 @@ const translations = {
     "doctor.edu4":          "Специјалист по ортодонција",
     "doctor.edu5":          "Напредни обуки по естетска стоматологија",
 
-    /* ── Gallery page ── */
+    
     "gallerypage.eyebrow":  "Нашата галерија",
     "gallerypage.title":    "Резултати кои зборуваат сами за себе",
     "gallerypage.subtitle": "Прегледајте вистински случаи третирани во DEA Dent — од ортодонтски корекции до импланти и протетика. Секоја слика ја одразува нашата посветеност кон прецизноста и трајните резултати.",
@@ -244,21 +244,21 @@ const translations = {
   },
 
   tr: {
-    /* ── Navigation ── */
+    
     "nav.about":   "Hakkımızda",
     "nav.services":"Hizmetler",
     "nav.gallery": "Galeri",
     "nav.contact": "İletişim",
     "nav.book":    "Randevu al",
 
-    /* ── Hero ── */
+    
     "hero.eyebrow":  "Gostivar, Kuzey Makedonya",
     "hero.title":    "DEA Dent — Gostivar'da modern diş bakımı",
     "hero.subtitle": "Güven, konfor ve modern diş hekimliği. İleri teknolojiyi, hastayı önceleyen nazik bir yaklaşımla birleştiriyoruz.",
     "hero.book":     "Randevu al",
     "hero.services": "Hizmetleri gör",
 
-    /* ── About ── */
+    
     "about.eyebrow": "Klinik hakkında",
     "about.title":   "Konforunuz etrafında kurulmuş modern bir klinik",
     "about.body":    "DEA Dent'te modern ekipmanı, deneyimli diş hekimlerini ve sakin, hijyenik bir ortamı bir araya getiriyoruz. Her tedavi titizlikle planlanır ve özenle uygulanır; böylece ziyaretiniz baştan sona güven verir.",
@@ -270,7 +270,7 @@ const translations = {
     "about.stat2":   "Tedavi edilen hasta",
     "about.stat3":   "Yapılan tedavi",
 
-    /* ── Services ── */
+    
     "services.eyebrow":   "Hizmetlerimiz",
     "services.title":     "Tek çatı altında eksiksiz bakım",
     "services.s1.title":  "Genel diş hekimliği",
@@ -286,12 +286,12 @@ const translations = {
     "services.s6.title":  "Koruyucu bakım",
     "services.s6.text":   "Gülüşünüzü ömür boyu sağlıklı tutmak için temizlik ve rehberlik.",
 
-    /* ── Gallery (homepage strip) ── */
+    
     "gallery.eyebrow": "DEA Dent'in içinde",
     "gallery.title":   "Kliniğimize bir bakış",
     "gallery.viewAll": "Tüm Galeriyi Gör",
 
-    /* ── Contact ── */
+    
     "contact.eyebrow":      "Bize ulaşın",
     "contact.title":        "Ziyaretinizi planlayın",
     "contact.body":         "Sorularınızı yanıtlamaktan ve size uygun bir randevu ayarlamanıza yardımcı olmaktan memnuniyet duyarız.",
@@ -306,11 +306,11 @@ const translations = {
     "contact.send":         "Mesaj gönder",
     "contact.success":      "Teşekkürler — kısa süre içinde sizinle iletişime geçeceğiz.",
 
-    /* ── Footer ── */
+    
     "footer.tag":    "Gostivar'da modern diş bakımı.",
     "footer.rights": "Tüm hakları saklıdır.",
 
-    /* ── Doctor ── */
+    
     "doctor.eyebrow":       "Uzmanımız",
     "doctor.title":         "Baş Ortodontistimiz ile Tanışın",
     "doctor.name":          "Dr. Zumri Bitri, PhD, DDS, MSc",
@@ -323,7 +323,7 @@ const translations = {
     "doctor.edu4":          "Ortodonti Uzmanı",
     "doctor.edu5":          "Estetik Diş Hekimliği Alanında İleri Eğitimler",
 
-    /* ── Gallery page ── */
+    
     "gallerypage.eyebrow":  "Galerimiz",
     "gallerypage.title":    "Kendi adına konuşan sonuçlar",
     "gallerypage.subtitle": "DEA Dent'te tedavi edilen gerçek vakaları inceleyin — ortodontik düzeltmelerden implantlara ve protezlere kadar. Her görüntü, hassasiyet ve kalıcı sonuçlara olan bağlılığımızı yansıtır.",
@@ -365,7 +365,7 @@ const translations = {
   }
 };
 
-/* ---------- Language switching ---------- */
+
 function setLanguage(lang) {
   const dict = translations[lang];
   if (!dict) return;
@@ -388,7 +388,7 @@ let savedLang = "sq";
 try { savedLang = localStorage.getItem("dea-lang") || "sq"; } catch (e) {}
 setLanguage(savedLang);
 
-/* ---------- Mobile menu ---------- */
+
 const menuToggle = document.getElementById("menuToggle");
 const mobileNav  = document.getElementById("mobileNav");
 if (menuToggle && mobileNav) {
@@ -404,7 +404,7 @@ if (menuToggle && mobileNav) {
   );
 }
 
-/* ---------- Gallery: auto-scroll + drag ---------- */
+
 (function gallery() {
   const track = document.getElementById("gallery-track");
   const inner = document.getElementById("gallery-inner");
@@ -454,7 +454,7 @@ if (menuToggle && mobileNav) {
   track.addEventListener("touchend",   pointerUp);
 })();
 
-/* ---------- Contact form ---------- */
+
 const form = document.getElementById("contactForm");
 const note = document.getElementById("formNote");
 if (form && note) {
@@ -466,6 +466,6 @@ if (form && note) {
   });
 }
 
-/* ---------- Footer year ---------- */
+
 const yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
