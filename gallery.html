@@ -35,7 +35,6 @@ body{
   line-height:1.6;
 }
 
-/* ─── HEADER ─── */
 .header{
   position: fixed;
   top: 0;
@@ -56,7 +55,6 @@ body{
   border-bottom: 1px solid rgba(10,45,74,.08);
 }
 
-/* Logo only */
 .brand{
   display: flex;
   align-items: center;
@@ -69,7 +67,6 @@ body{
   display: block;
 }
 
-/* Navigation */
 .nav-links{
   display: flex;
   align-items: center;
@@ -88,11 +85,11 @@ body{
   color: var(--navy);
 }
 
-/* Smaller Reserve Button */
+
 .nav-cta{
   background: var(--navy);
   color: #fff !important;
-  padding: 7px 14px;      /* reduced */
+  padding: 7px 14px;      
   border-radius: 7px;
   font-size: 13px !important;
   font-weight: 600;
@@ -103,7 +100,7 @@ body{
   background: var(--navy-mid) !important;
 }
 
-/* Language Switcher */
+
 .lang{
   display: flex;
   gap: 4px;
@@ -136,7 +133,7 @@ body{
   background: var(--sky);
 }
 
-/* ─── HERO ─── */
+
 .hero{
   padding:168px 40px 90px;
   background:var(--white);
@@ -186,7 +183,7 @@ body{
 }
 .hero-back:hover{background:var(--navy);color:#fff}
 
-/* ─── FILTER BAR ─── */
+
 .filter-section{
   background:var(--faint);
   padding:28px 40px 0;
@@ -228,7 +225,7 @@ body{
 }
 .filter-tab.active .dot{opacity:1;background:#fff}
 
-/* SECTION BANNER */
+
 .section-banner{
   display: none;
   margin: 80px 40px 0;
@@ -246,7 +243,7 @@ body{
   display: flex;
 }
 
-/* MOBILE FIX */
+
 @media (max-width: 768px){
 
   .section-banner{
@@ -274,7 +271,7 @@ body{
     max-width: 100%;
   }
 }
-/* ─── GALLERY ─── */
+
 .gallery-wrap{
   width:min(1400px,100%);
   margin:72px auto 80px;
@@ -301,7 +298,7 @@ body{
 }
 .gallery-item video{background:#000}
 
-/* Team card styles — hidden by default, shown only via filter */
+
 .gallery-item.team{display:none}
 .team-card{
   padding:28px 24px;
@@ -345,7 +342,7 @@ body{
   color:var(--accent);
 }
 
-/* ─── FOOTER CTA ─── */
+
 .footer-cta{
   background:var(--navy);color:#fff;
   text-align:center;padding:80px 40px;
@@ -368,7 +365,7 @@ body{
 }
 .footer-cta a:hover{opacity:.88}
 
-/* ─── RESPONSIVE ─── */
+
 @media(max-width:640px){
   .header{padding:0 16px}
   .nav-links a:not(.nav-cta){display:none}
@@ -402,15 +399,7 @@ body{
   </div>
 </header>
 
-<!-- ─── HERO ─── */
-<section class="hero">
-  <div class="hero-eyebrow"><span></span><span data-i18n="gallerypage.eyebrow">Galeria jonë</span></div>
-  <h1 data-i18n="gallerypage.title">Rezultate që <em>flasin</em> vetë</h1>
-  <p data-i18n="gallerypage.subtitle">Shfletoni raste reale të trajtuara në DEA Dent — nga korrektimet ortodontike deri te implantet dhe protetika. Çdo imazh pasqyron angazhimin tonë ndaj precizionit dhe rezultateve të qëndrueshme.</p>
-  <a href="index.html" class="hero-back" data-i18n="gallerypage.back">← Kthehu në shtëpi</a>
-</section>
 
-<!-- ─── FILTER BAR ─── -->
 <div class="filter-section">
   <div class="filter-label" data-i18n="gallerypage.filterLabel">Filtro sipas trajtimit</div>
   <div class="filter-tabs">
@@ -423,7 +412,6 @@ body{
   </div>
 </div>
 
-<!-- ─── SECTION BANNERS ─── -->
 <div class="section-banner" id="banner-ortodonci">
   <div class="banner-icon">🦷</div>
   <div class="banner-text">
@@ -433,7 +421,7 @@ body{
 </div>
 
 <div class="section-banner" id="banner-protetik">
-  <div class="banner-icon">✨</div>
+  <div class="banner-icon"></div>
   <div class="banner-text">
     <h2 data-i18n="gallerypage.banner.protetik.title">Dentistëria Protetike</h2>
     <p data-i18n="gallerypage.banner.protetik.text">Nga kurorë të vetëm deri te restaurimet e harqeve të plota, zgjidhjet tona protetike janë krijuar për pamje natyrale dhe qëndrueshmëri afatgjatë. Bashkëpunojmë me laboratorë të certifikuar dentar për të siguruar që çdo rast plotëson standardet më të larta.</p>
@@ -464,11 +452,11 @@ body{
   </div>
 </div>
 
-<!-- ─── GALLERY GRID ─── -->
+
 <div class="gallery-wrap">
   <div class="gallery-grid">
 
-    <!-- TEAM (hidden in "all", shown only via team filter) -->
+    
     <div class="gallery-item team">
       <div class="team-card">
         <div class="team-avatar-placeholder">ZB</div>
@@ -505,7 +493,7 @@ body{
       </div>
     </div>
 
-    <!-- ORTHODONTICS -->
+    
     <div class="gallery-item ortodonci">
       <img src="https://i.imgur.com/rQV6n4t.jpeg" alt="Orthodontics case">
       <div class="item-caption" data-i18n="gallerypage.filterOrtho">Ortodonci</div>
@@ -528,7 +516,7 @@ body{
       <div class="item-caption" data-i18n="gallerypage.filterOrtho">Ortodonci</div>
     </div>
 
-    <!-- PROSTHETICS -->
+    
     <div class="gallery-item protetik">
       <img src="https://i.imgur.com/7d9X7YG.jpeg" alt="Prosthetics case">
       <div class="item-caption" data-i18n="gallerypage.filterPros">Protetikë</div>
@@ -549,7 +537,7 @@ body{
       <div class="item-caption" data-i18n="gallerypage.filterPros">Protetikë</div>
     </div>
 
-    <!-- IMPLANTOLOGY -->
+    
     <div class="gallery-item implantologji">
       <img src="https://i.imgur.com/rOFCN62.jpeg" alt="Implantology case">
       <div class="item-caption" data-i18n="gallerypage.filterImpl">Implantologji</div>
@@ -577,7 +565,7 @@ body{
       <div class="item-caption" data-i18n="gallerypage.filterImpl">Implantologji</div>
     </div>
 
-    <!-- ENDODONTICS -->
+    
     <div class="gallery-item endodonci">
       <img src="https://i.imgur.com/dtA7Ccs.jpeg" alt="Endodontics case">
       <div class="item-caption" data-i18n="gallerypage.filterEndo">Endodonci</div>
@@ -618,14 +606,14 @@ body{
   </div>
 </div>
 
-<!-- ─── FOOTER CTA ─── -->
+
 <div class="footer-cta">
   <h2 data-i18n="gallerypage.cta.title">Gati për të filluar trajtimin tuaj?</h2>
   <p data-i18n="gallerypage.cta.text">Caktoni një konsultë me specialistët tanë. Ne do të vlerësojmë rastin tuaj dhe do të rekomandojmë qasjen më të mirë.</p>
   <a href="index.html#contact" data-i18n="gallerypage.cta.btn">Rezervo konsultë →</a>
 </div>
 
-<!-- ─── SCRIPTS ─── -->
+
 <script src="script.js"></script>
 <script>
 const tabs = document.querySelectorAll(".filter-tab");
