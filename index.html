@@ -482,49 +482,85 @@
     </section>
 
     <section class="section section--soft" id="contact">
-      <div class="container contact">
-        <div class="contact__info">
-          <p class="eyebrow" data-i18n="contact.eyebrow">Get in touch</p>
-          <h2 class="section__title" data-i18n="contact.title">Book your visit</h2>
-          <p class="lead" data-i18n="contact.body">We are happy to answer your questions and help you schedule an appointment that fits your day.</p>
-          <ul class="contact__list">
-            <li>
-              <span class="contact__label" data-i18n="contact.addressLabel">Address</span>
-              <span>Gostivar, North Macedonia</span>
-            </li>
-            <li>
-              <span class="contact__label" data-i18n="contact.phoneLabel">Phone</span>
-              <a href="tel:+38942550590">+389 42 550 590</a>
-            </li>
-            <li>
-              <span class="contact__label" data-i18n="contact.emailLabel">Email</span>
-              <a href="mailto:muhoal787@gmail.com">info@deadent.mk</a>
-            </li>
-            <li>
-              <span class="contact__label" data-i18n="contact.hoursLabel">Working hours</span>
-              <span data-i18n="contact.hours">Mon–Fri 09:00–19:00 · Sat 09:00–14:00</span>
-            </li>
-          </ul>
-        </div>
-        <form class="contact__form" id="contactForm" novalidate>
-          <div class="field">
-            <label for="name" data-i18n="contact.name">Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="field">
-            <label for="phone" data-i18n="contact.phone">Phone</label>
-            <input type="tel" id="phone" name="phone" required />
-          </div>
-          <div class="field">
-            <label for="message" data-i18n="contact.message">Message</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary" data-i18n="contact.send">Send Message</button>
-          <p class="form__note" id="formNote" role="status" aria-live="polite" data-i18n="contact.success" hidden>Thank you — we will contact you shortly.</p>
-        </form>
-      </div>
-    </section>
-  </main>
+  <div class="container contact">
+    <div class="contact__info">
+      <p class="eyebrow">Get in touch</p>
+      <h2 class="section__title">Book your visit</h2>
+      <p class="lead">
+        We are happy to answer your questions and help you schedule
+        an appointment that fits your day.
+      </p>
+
+
+  <ul class="contact__list">
+    <li>
+      <span class="contact__label">Address</span>
+      <span>Gostivar, North Macedonia</span>
+    </li>
+
+    <li>
+      <span class="contact__label">Phone</span>
+      <a href="tel:+38942550590">+389 42 550 590</a>
+    </li>
+
+    <li>
+      <span class="contact__label">Email</span>
+      <a href="mailto:muhoal787@gmail.com">muhoal787@gmail.com</a>
+    </li>
+
+    <li>
+      <span class="contact__label">Working hours</span>
+      <span>Mon–Fri 09:00–19:00 · Sat 09:00–14:00</span>
+    </li>
+  </ul>
+</div>
+
+<form
+  class="contact__form"
+  action="mailto:muhoal787@gmail.com"
+  method="post"
+  enctype="text/plain"
+>
+  <div class="field">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      id="name"
+      name="Name"
+      required
+    />
+  </div>
+
+  <div class="field">
+    <label for="phone">Phone</label>
+    <input
+      type="tel"
+      id="phone"
+      name="Phone"
+      required
+    />
+  </div>
+
+  <div class="field">
+    <label for="message">Message</label>
+    <textarea
+      id="message"
+      name="Message"
+      rows="4"
+    ></textarea>
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn--primary"
+  >
+    Send Message
+  </button>
+</form>
+
+  </div>
+</section>
+
 
   <footer class="footer">
     <div class="container footer__inner">
