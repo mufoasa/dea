@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DEA Dent – Modern Dental Care in Gostivar</title>
+  <title>DEA Dent - Gostivar</title>
   <meta name="description" content="DEA Dent is a modern dental clinic in Gostivar, North Macedonia, offering general dentistry, implants, orthodontics and more with experienced dentists and advanced equipment." />
-  <meta name="keywords" content="dentist Gostivar, dental clinic, DEA Dent, implants, orthodontics, teeth whitening, North Macedonia" />
+  <meta name="keywords" content="dentist Gostivar, dental clinic, DEA Dent, implants, orthodontics, teeth whitening, North Macedonia, dhemb, zubi, zabi, doctor, doktor, mjek, spital, ordinanc, clinic," />
   <meta name="author" content="DEA Dent" />
   <meta name="robots" content="index, follow" />
 
-  
   <meta property="og:type" content="website" />
   <meta property="og:title" content="DEA Dent – Modern Dental Care in Gostivar" />
   <meta property="og:description" content="Modern dental clinic in Gostivar, North Macedonia. Trust, comfort and advanced dentistry." />
@@ -19,15 +18,286 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.x/tabler-icons.min.css" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico">
+
+  <!-- ============ LOADER STYLES ============ -->
+  <style>
+    :root {
+      --bg: #ffffff;
+      --soft: #f4f6f8;
+      --text: #1a1a1a;
+      --muted: #5b6671;
+      --accent: #0d4c73;
+      --accent-dark: #093a59;
+      --line: #e6e9ed;
+      --white: #ffffff;
+      --radius: 14px;
+      --shadow: 0 1px 2px rgba(16,24,40,.04), 0 8px 24px rgba(16,24,40,.06);
+      --shadow-hover: 0 2px 4px rgba(16,24,40,.06), 0 16px 40px rgba(13,76,115,.12);
+      --container: 1140px;
+    }
+
+    @keyframes pulse    { 0%,100%{opacity:1} 50%{opacity:.4} }
+    @keyframes fadeUp   { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes dotBounce{ 0%,80%,100%{transform:translateY(0)} 40%{transform:translateY(-8px)} }
+    @keyframes toothPulse{ 0%,100%{transform:scale(1)} 50%{transform:scale(1.04)} }
+    @keyframes loaderFadeOut{ to{opacity:0;visibility:hidden;pointer-events:none} }
+
+    #dea-loader {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity .5s ease;
+    }
+
+    #dea-loader.hide {
+      animation: loaderFadeOut .5s ease forwards;
+    }
+
+    .loader-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 2rem;
+    }
+
+    .loader-logo-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 2.8rem;
+      animation: fadeUp .6s ease both;
+    }
+
+    .loader-tooth {
+      animation: toothPulse 2s ease-in-out infinite;
+    }
+
+    .loader-brand-name {
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: -.5px;
+      font-family: system-ui, sans-serif;
+    }
+
+    .loader-brand-sub {
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      margin-top: -2px;
+      font-family: system-ui, sans-serif;
+    }
+
+    .loader-ring-wrap {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin-bottom: 2rem;
+      animation: fadeUp .6s .15s ease both;
+    }
+
+    .loader-ring-bg {
+      fill: none;
+      stroke: var(--line);
+      stroke-width: 5;
+    }
+
+    .loader-ring-fill {
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 5;
+      stroke-linecap: round;
+      stroke-dasharray: 239;
+      stroke-dashoffset: 239;
+      transform-origin: 50% 50%;
+      transform: rotate(-90deg);
+      transition: stroke-dashoffset .15s ease;
+    }
+
+    .loader-ring-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .loader-pct {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--accent);
+      font-family: system-ui, sans-serif;
+    }
+
+    .loader-msg {
+      font-size: 16px;
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: .4rem;
+      font-family: system-ui, sans-serif;
+      animation: fadeUp .6s .25s ease both;
+    }
+
+    .loader-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      font-family: system-ui, sans-serif;
+      animation: fadeUp .6s .3s ease both;
+      transition: opacity .3s;
+    }
+
+    .loader-dots {
+      display: flex;
+      gap: 7px;
+      animation: fadeUp .6s .35s ease both;
+    }
+
+    .loader-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: dotBounce 1.2s ease-in-out infinite;
+    }
+
+    .loader-dot:nth-child(2) { animation-delay: .15s; background: #1a6fa0; }
+    .loader-dot:nth-child(3) { animation-delay: .3s;  background: var(--muted); opacity: .6; }
+
+    .loader-steps {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+      margin-top: 2.8rem;
+      animation: fadeUp .6s .5s ease both;
+    }
+
+    .loader-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .loader-step-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: var(--muted);
+      background: var(--soft);
+      transition: all .4s ease;
+    }
+
+    .loader-step-icon.done {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--white);
+    }
+
+    .loader-step-icon.active {
+      background: #e6f0f7;
+      border-color: var(--accent);
+      color: var(--accent);
+      animation: pulse 1.4s ease-in-out infinite;
+    }
+
+    .loader-step-label {
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: .05em;
+      font-family: system-ui, sans-serif;
+    }
+
+    .loader-step-line {
+      width: 40px;
+      height: 1px;
+      background: var(--line);
+      margin-top: 19px;
+      flex-shrink: 0;
+      transition: background .4s ease;
+    }
+
+    .loader-step-line.done { background: var(--accent); }
+  </style>
+  <!-- ============ END LOADER STYLES ============ -->
 </head>
 <body>
-  
+
+  <!-- ============ LOADER OVERLAY ============ -->
+  <div id="dea-loader" role="status" aria-label="Loading DEA Dent">
+    <div class="loader-wrap">
+
+      <div class="loader-logo-row">
+        <svg class="loader-tooth" width="38" height="42" viewBox="0 0 34 38" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6 8C6 8 2 9 2 16C2 21 3.5 26 5 30C6 33 7.5 36 9.5 36C11.5 36 12 33.5 13 30C13.8 27.3 15.5 25 17 25C18.5 25 20.2 27.3 21 30C22 33.5 22.5 36 24.5 36C26.5 36 28 33 29 30C30.5 26 32 21 32 16C32 9 28 8 28 8C25 6 22 5.5 17 5.5C12 5.5 9 6 6 8Z" fill="#e6f0f7" stroke="#0d4c73" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M10 8.5C10 8.5 8 7 8 5C8 2.5 10 2 12 2C13.5 2 14.5 3 15.5 3C16.5 3 17.5 2 19 2C21.5 2 23.5 3 23.5 5.5C23.5 7.5 21.5 8.5 21.5 8.5" stroke="#0d4c73" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M13 15C13 15 14.5 17 17 17C19.5 17 21 15 21 15" stroke="#0d4c73" stroke-width="1.3" stroke-linecap="round"/>
+        </svg>
+        <div>
+          <div class="loader-brand-name">DEA Dent</div>
+          <div class="loader-brand-sub">Dental Clinic</div>
+        </div>
+      </div>
+
+      <div class="loader-ring-wrap">
+        <svg width="100" height="100" viewBox="0 0 100 100">
+          <circle class="loader-ring-bg" cx="50" cy="50" r="38"/>
+          <circle class="loader-ring-fill" id="loaderRing" cx="50" cy="50" r="38"/>
+        </svg>
+        <div class="loader-ring-inner">
+          <span class="loader-pct" id="loaderPct">0%</span>
+        </div>
+      </div>
+
+      <div class="loader-msg">Preparing your appointment</div>
+      <div class="loader-sub" id="loaderSub">Taking you there…</div>
+
+      <div class="loader-dots">
+        <div class="loader-dot"></div>
+        <div class="loader-dot"></div>
+        <div class="loader-dot"></div>
+      </div>
+
+      <div class="loader-steps">
+        <div class="loader-step">
+          <div class="loader-step-icon done"><i class="ti ti-shield-check"></i></div>
+          <div class="loader-step-label">Getting Started</div>
+        </div>
+        <div class="loader-step-line done"></div>
+        <div class="loader-step">
+          <div class="loader-step-icon active" id="loaderS2"><i class="ti ti-calendar"></i></div>
+          <div class="loader-step-label">Scheduling</div>
+        </div>
+        <div class="loader-step-line" id="loaderL2"></div>
+        <div class="loader-step">
+          <div class="loader-step-icon" id="loaderS3"><i class="ti ti-tooth"></i></div>
+          <div class="loader-step-label">Ready</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- ============ END LOADER OVERLAY ============ -->
+
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#hero" class="brand" aria-label="DEA Dent home">
-  <img src="deanav.png" alt="DEA Dent Logo" class="brand__logo">
-</a>
+        <img src="deanav.png" alt="DEA Dent Logo" class="brand__logo">
+      </a>
 
       <nav class="nav" aria-label="Primary">
         <a href="#about" data-i18n="nav.about">About</a>
@@ -49,7 +319,6 @@
       </div>
     </div>
 
-   
     <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
       <a href="#about" data-i18n="nav.about">About</a>
       <a href="#services" data-i18n="nav.services">Services</a>
@@ -59,47 +328,23 @@
   </header>
 
   <main>
-    
-<section class="hero" id="hero">
+    <section class="hero" id="hero">
+      <video class="hero__media" autoplay muted loop playsinline poster="hero.jpg">
+        <source src="herodea.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow" data-i18n="hero.eyebrow">Gostivar, North Macedonia</p>
+        <h1 class="hero__title" data-i18n="hero.title">DEA Dent — Modern Dental Care in Gostivar</h1>
+        <p class="hero__subtitle" data-i18n="hero.subtitle">Trust, comfort and modern dentistry. We combine advanced technology with a gentle, patient-first approach.</p>
+        <div class="hero__actions">
+          <a href="#contact" class="btn btn--primary" data-i18n="hero.book">Book Appointment</a>
+          <a href="#services" class="btn btn--ghost" data-i18n="hero.services">View Services</a>
+        </div>
+      </div>
+    </section>
 
-  
-  <video class="hero__media" autoplay muted loop playsinline poster="hero.jpg">
-    <source src="herodea.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-
-  
-  <div class="hero__overlay"></div>
-
-  
-  <div class="container hero__content">
-
-    <p class="hero__eyebrow" data-i18n="hero.eyebrow">
-      Gostivar, North Macedonia
-    </p>
-
-    <h1 class="hero__title" data-i18n="hero.title">
-      DEA Dent — Modern Dental Care in Gostivar
-    </h1>
-
-    <p class="hero__subtitle" data-i18n="hero.subtitle">
-      Trust, comfort and modern dentistry. We combine advanced technology with a gentle, patient-first approach.
-    </p>
-
-    <div class="hero__actions">
-      <a href="#contact" class="btn btn--primary" data-i18n="hero.book">
-        Book Appointment
-      </a>
-
-      <a href="#services" class="btn btn--ghost" data-i18n="hero.services">
-        View Services
-      </a>
-    </div>
-
-  </div>
-</section>
-
-   
     <section class="section" id="about">
       <div class="container about">
         <div class="about__intro">
@@ -130,7 +375,6 @@
       </div>
     </section>
 
-    
     <section class="section section--soft" id="services">
       <div class="container">
         <div class="section__head">
@@ -184,93 +428,59 @@
       </div>
     </section>
 
-  
-<section class="section" id="gallery">
-  <div class="container section__head">
-    <p class="eyebrow" data-i18n="gallery.eyebrow">Inside DEA Dent</p>
-    <h2 class="section__title" data-i18n="gallery.title">A look around our clinic</h2>
-  </div>
-
-  <div class="gallery" id="gallery-track" aria-label="Clinic gallery, drag to scroll">
-    <div class="gallery__inner" id="gallery-inner">
-      <figure class="gallery__item"><img src="https://i.imgur.com/Y7gAcJJ.jpeg" alt="" loading="lazy"></figure>
-      <figure class="gallery__item"><img src="https://i.imgur.com/4NEYXn5.jpeg" alt="" loading="lazy"></figure>
-      <figure class="gallery__item"><img src="https://i.imgur.com/rOFCN62.jpeg" alt="" loading="lazy"></figure>
-      <figure class="gallery__item"><img src="https://i.imgur.com/7d9X7YG.jpeg" alt="" loading="lazy"></figure>
-      <figure class="gallery__item"><img src="https://i.imgur.com/Dwspfie.jpeg" alt="" loading="lazy"></figure>
-      <figure class="gallery__item"><img src="https://i.imgur.com/STuyWwk.jpeg" alt="" loading="lazy"></figure>
-      <figure class="gallery__item"><img src="https://i.imgur.com/CuFafmp.jpeg" alt="" loading="lazy"></figure>
-      <figure class="gallery__item"><img src="https://i.imgur.com/Xpe6WG9.jpeg" alt="" loading="lazy"></figure>
-      <figure class="gallery__item"><img src="https://i.imgur.com/rQV6n4t.jpeg" alt="" loading="lazy"></figure>
-      <figure class="gallery__item"><img src="https://i.imgur.com/dtA7Ccs.jpeg" alt="" loading="lazy"></figure>
-    </div>
-  </div>
-
-  <div class="gallery__actions">
-    <a href="gallery.html" class="btn btn--primary" data-i18n="gallery.viewAll">
-      View Full Gallery
-    </a>
-  </div>
-</section>
-
-
-<section class="section" id="head-dentist">
-  <div class="container">
-
-    <div class="section__head">
-      <p class="eyebrow" data-i18n="doctor.eyebrow">Our Specialist</p>
-      <h2 class="section__title" data-i18n="doctor.title">Meet Our Head Orthodontist</h2>
-    </div>
-
-    <div class="doctor-card">
-
-      <div class="doctor-gallery">
-        <button class="doctor-btn" id="prevDoctor">&#8249;</button>
-
-        <img
-          id="doctorImage"
-          src="images/deadoctor.jpg"
-          alt="Dr. Zumri Bitri"
-        >
-
-        <button class="doctor-btn" id="nextDoctor">&#8250;</button>
+    <section class="section" id="gallery">
+      <div class="container section__head">
+        <p class="eyebrow" data-i18n="gallery.eyebrow">Inside DEA Dent</p>
+        <h2 class="section__title" data-i18n="gallery.title">A look around our clinic</h2>
       </div>
-
-      <div class="doctor-content">
-
-        <h3 data-i18n="doctor.name">
-          Dr. Zumri Bitri, PhD, DDS, MSc
-        </h3>
-
-        <p class="doctor-position" data-i18n="doctor.position">
-          Specialist in Orthodontics & Aesthetic Dentistry
-        </p>
-
-        <p data-i18n="doctor.bio">
-          Dr. Zumri Bitri is a highly qualified dental specialist with extensive
-          experience in orthodontics and aesthetic dentistry.
-        </p>
-
-        <h4 data-i18n="doctor.educationTitle">
-          Education & Qualifications
-        </h4>
-
-        <ul class="doctor-education">
-          <li data-i18n="doctor.edu1">Doctor of Philosophy (PhD)</li>
-          <li data-i18n="doctor.edu2">Doctor of Dental Surgery (DDS)</li>
-          <li data-i18n="doctor.edu3">Master of Science (MSc)</li>
-          <li data-i18n="doctor.edu4">Specialist in Orthodontics</li>
-          <li data-i18n="doctor.edu5">Advanced Training in Aesthetic Dentistry</li>
-        </ul>
-
+      <div class="gallery" id="gallery-track" aria-label="Clinic gallery, drag to scroll">
+        <div class="gallery__inner" id="gallery-inner">
+          <figure class="gallery__item"><img src="https://i.imgur.com/Y7gAcJJ.jpeg" alt="" loading="lazy"></figure>
+          <figure class="gallery__item"><img src="https://i.imgur.com/4NEYXn5.jpeg" alt="" loading="lazy"></figure>
+          <figure class="gallery__item"><img src="https://i.imgur.com/rOFCN62.jpeg" alt="" loading="lazy"></figure>
+          <figure class="gallery__item"><img src="https://i.imgur.com/7d9X7YG.jpeg" alt="" loading="lazy"></figure>
+          <figure class="gallery__item"><img src="https://i.imgur.com/Dwspfie.jpeg" alt="" loading="lazy"></figure>
+          <figure class="gallery__item"><img src="https://i.imgur.com/STuyWwk.jpeg" alt="" loading="lazy"></figure>
+          <figure class="gallery__item"><img src="https://i.imgur.com/CuFafmp.jpeg" alt="" loading="lazy"></figure>
+          <figure class="gallery__item"><img src="https://i.imgur.com/Xpe6WG9.jpeg" alt="" loading="lazy"></figure>
+          <figure class="gallery__item"><img src="https://i.imgur.com/rQV6n4t.jpeg" alt="" loading="lazy"></figure>
+          <figure class="gallery__item"><img src="https://i.imgur.com/dtA7Ccs.jpeg" alt="" loading="lazy"></figure>
+        </div>
       </div>
+      <div class="gallery__actions">
+        <a href="gallery.html" class="btn btn--primary" data-i18n="gallery.viewAll">View Full Gallery</a>
+      </div>
+    </section>
 
-    </div>
+    <section class="section" id="head-dentist">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow" data-i18n="doctor.eyebrow">Our Specialist</p>
+          <h2 class="section__title" data-i18n="doctor.title">Meet Our Head Orthodontist</h2>
+        </div>
+        <div class="doctor-card">
+          <div class="doctor-gallery">
+            <button class="doctor-btn" id="prevDoctor">&#8249;</button>
+            <img id="doctorImage" src="images/deadoctor.jpg" alt="Dr. Zumri Bitri">
+            <button class="doctor-btn" id="nextDoctor">&#8250;</button>
+          </div>
+          <div class="doctor-content">
+            <h3 data-i18n="doctor.name">Dr. Zumri Bitri, PhD, DDS, MSc</h3>
+            <p class="doctor-position" data-i18n="doctor.position">Specialist in Orthodontics & Aesthetic Dentistry</p>
+            <p data-i18n="doctor.bio">Dr. Zumri Bitri is a highly qualified dental specialist with extensive experience in orthodontics and aesthetic dentistry.</p>
+            <h4 data-i18n="doctor.educationTitle">Education & Qualifications</h4>
+            <ul class="doctor-education">
+              <li data-i18n="doctor.edu1">Doctor of Philosophy (PhD)</li>
+              <li data-i18n="doctor.edu2">Doctor of Dental Surgery (DDS)</li>
+              <li data-i18n="doctor.edu3">Master of Science (MSc)</li>
+              <li data-i18n="doctor.edu4">Specialist in Orthodontics</li>
+              <li data-i18n="doctor.edu5">Advanced Training in Aesthetic Dentistry</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  </div>
-</section>
-    
-    
     <section class="section section--soft" id="contact">
       <div class="container contact">
         <div class="contact__info">
@@ -296,7 +506,6 @@
             </li>
           </ul>
         </div>
-
         <form class="contact__form" id="contactForm" novalidate>
           <div class="field">
             <label for="name" data-i18n="contact.name">Name</label>
@@ -317,7 +526,6 @@
     </section>
   </main>
 
-  
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
@@ -342,27 +550,78 @@
   </footer>
 
   <script src="script.js"></script>
+
+<script>
+    
+    (function () {
+      const loader  = document.getElementById('dea-loader');
+      const pctEl   = document.getElementById('loaderPct');
+      const subEl   = document.getElementById('loaderSub');
+      const ring    = document.getElementById('loaderRing');
+      const s2      = document.getElementById('loaderS2');
+      const s3      = document.getElementById('loaderS3');
+      const l2      = document.getElementById('loaderL2');
+      const circ    = 2 * Math.PI * 38;
+      const msgs    = ['Connecting securely…','Loading your profile…','Almost there…','Ready!'];
+      let p = 0;
+      const iv = setInterval(() => {
+        p = Math.min(p + Math.round(Math.random() * 4 + 1), 100);
+        pctEl.textContent = p + '%';
+        ring.style.strokeDashoffset = circ * (1 - p / 100);
+        if (p >= 33) subEl.textContent = msgs[1];
+        if (p >= 66) {
+          subEl.textContent = msgs[2];
+          s2.className = 'loader-step-icon done';
+          l2.className = 'loader-step-line done';
+          s3.className = 'loader-step-icon active';
+        }
+        if (p >= 100) {
+          subEl.textContent = msgs[3];
+          s3.className = 'loader-step-icon done';
+          clearInterval(iv);
+          setTimeout(() => loader.classList.add('hide'), 300);
+        }
+      }, 80);
+      window.addEventListener('load', () => {
+        if (p < 100) {
+          clearInterval(iv);
+          setTimeout(() => {
+            p = 100;
+            pctEl.textContent = '100%';
+            ring.style.strokeDashoffset = 0;
+            subEl.textContent = msgs[3];
+            s2.className = 'loader-step-icon done';
+            l2.className = 'loader-step-line done';
+            s3.className = 'loader-step-icon done';
+            setTimeout(() => loader.classList.add('hide'), 400);
+          }, 2000);
+        }
+      });
+    })();
+ 
+  </script>
+
   <script>
-const doctorPhotos = [
-  "images/deadoctor.jpg",
-  "images/dea13.jpg",
-  "images/dea11.jpg",
-  "images/dea12.jpg"
-];
+    const doctorPhotos = [
+      "images/deadoctor.jpg",
+      "images/dea13.jpg",
+      "images/dea11.jpg",
+      "images/dea12.jpg"
+    ];
 
-let doctorIndex = 0;
+    let doctorIndex = 0;
+    const doctorImage = document.getElementById("doctorImage");
 
-const doctorImage = document.getElementById("doctorImage");
+    document.getElementById("nextDoctor").addEventListener("click", () => {
+      doctorIndex = (doctorIndex + 1) % doctorPhotos.length;
+      doctorImage.src = doctorPhotos[doctorIndex];
+    });
 
-document.getElementById("nextDoctor").addEventListener("click", () => {
-  doctorIndex = (doctorIndex + 1) % doctorPhotos.length;
-  doctorImage.src = doctorPhotos[doctorIndex];
-});
+    document.getElementById("prevDoctor").addEventListener("click", () => {
+      doctorIndex = (doctorIndex - 1 + doctorPhotos.length) % doctorPhotos.length;
+      doctorImage.src = doctorPhotos[doctorIndex];
+    });
+  </script>
 
-document.getElementById("prevDoctor").addEventListener("click", () => {
-  doctorIndex = (doctorIndex - 1 + doctorPhotos.length) % doctorPhotos.length;
-  doctorImage.src = doctorPhotos[doctorIndex];
-});
-</script>
 </body>
 </html>
